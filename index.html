@@ -14,12 +14,22 @@
     <p>GitHub: <a href="https://github.com/PALEMSATHYANARAYANA26" target="_blank">My GitHub</a></p>
 
     <button onclick="playAudio()">🎤 Hear My Introduction</button>
-    <audio id="audioIntro" src="intro.mp3"></audio>
+    <audio id="audioIntro" src="voice.mp3"></audio>
 
     <h3>📱 Scan this QR to open my card</h3>
     <img src="qrcode.png" alt="QR Code" class="qr">
   </div>
 
-  <script src="script.js"></script>
+  <!-- Auto-play on page load -->
+  <audio autoplay>
+    <source src="voice.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <script>
+    function playAudio() {
+      document.getElementById("audioIntro").play();
+    }
+  </script>
 </body>
 </html>
