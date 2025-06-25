@@ -7,28 +7,25 @@
 </head>
 <body>
   <div class="card">
-    <img src="your-photo.jpg" alt="Your Photo" class="profile">
+    <img src="photo.jpg" alt="Your Photo" class="profile">
     <h1>Palem Sathyanarayana</h1>
     <p>BTech ECE Graduate | Web Developer</p>
     <p>Email: palemsathipalem@gmail.com</p>
     <p>GitHub: <a href="https://github.com/PALEMSATHYANARAYANA26" target="_blank">My GitHub</a></p>
 
+    <!-- 🎤 Audio Intro -->
     <button onclick="playAudio()">🎤 Hear My Introduction</button>
-    <audio id="audioIntro" src="voice.mp3"></audio>
+    <audio id="audioIntro" src="converted_voice.mp3" autoplay></audio>
 
+    <!-- 📱 QR Code -->
     <h3>📱 Scan this QR to open my card</h3>
     <img src="qrcode.png" alt="QR Code" class="qr">
   </div>
 
-  <!-- Auto-play on page load -->
-  <audio autoplay>
-    <source src="voice.mp3" type="audio/mpeg">
-    Your browser does not support the audio tag.
-  </audio>
-
   <script>
     function playAudio() {
-      document.getElementById("audioIntro").play();
+      const audio = document.getElementById("audioIntro");
+      audio.play();
     }
   </script>
 </body>
